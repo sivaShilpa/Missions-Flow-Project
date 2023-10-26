@@ -1,4 +1,4 @@
-# React Project 
+# Missions Flow Project 
 In my new journey at RadicalX, I am creating this repository on my first day as a deliverable. It's to set up the frontend for the Missions Flow which will be described soon. 
 
 # RadicalX
