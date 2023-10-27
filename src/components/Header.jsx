@@ -1,26 +1,24 @@
+"use client"
 import React from 'react'
 import '../styles/Header.css'
 import Image from 'next/image'
 import homeLogo from "@/assets/homeLogo.svg"
 import Link from 'next/link'
-import HeaderMiddle from './HeaderMiddle'
+import { useRouter } from 'next/navigation'
+import HeaderMiddleLink from './HeaderMiddleLink'
 
 const Header = () => {
+        
   return (
     <>
         <div className='header'>
             <Link className='headerLeft' href="/">
                 <Image src={homeLogo} alt="logoHome" />
-            </Link>
-            {/* <div className='headerMiddle'><HeaderMiddle/></div> */}
-            
+            </Link>              
             <div className='headerMiddle'>
-                <Link href="/missions">
-                    <div className='tab'>🚀 Missions</div>
-                    <div className='tab'></div>
-                </Link>
-                <Link href="/leadership">🏆 Leaderboard</Link>
-                <Link href="/rewards">💰 Rewards</Link>
+                <HeaderMiddleLink icon={'🚀'} text={'Missions'} path={'/missions'}/>
+                <HeaderMiddleLink icon={'🏆'} text={'Leaderboard'} path={'/leaderboard'}/>
+                <HeaderMiddleLink icon={'💰'} text={'Rewards'} path={'/rewards'}/>
             </div>
             <div className="headerRight">
                 <div>diamonds</div>
