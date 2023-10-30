@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect} from 'react'
+import React from 'react'
 import '../styles/Header.css'
 import Image from 'next/image'
 import homeLogo from "@/assets/homeLogo.svg"
@@ -9,9 +9,12 @@ import diamondBlue from '../assets/diamondBlue.svg'
 import coinGold from '../assets/coinGold.svg'
 import avatar from '../assets/avatar.svg'
 import status from '../assets/status.svg'
+import { usePathname } from 'next/navigation';
+
 
 const Header = () => {
-    const [flag, setFlag] = useState(false);    
+       
+    const router = usePathname();
 
     return (
         <>
@@ -21,9 +24,10 @@ const Header = () => {
                 </Link>     
                 
                 <div className='headerMiddle'>
-                    <HeaderMiddleLink icon='🚀' text='Missions' path='/missions' onClick={() => setFlag(currentState => !currentState)} flag={flag}/>
-                    <HeaderMiddleLink icon='🏆' text='Leaderboard' path='/leaderboard' onClick={() => setFlag(currentState => !currentState)} flag={flag}/>
-                    <HeaderMiddleLink icon='💰' text='Rewards' path='/rewards' onClick={() => setFlag(currentState => !currentState)} flag={flag}/>
+                    {/* {console.log(router)} */}
+                    <HeaderMiddleLink icon='🚀' text='Missions' path='/Missions' flag={router == "/Missions" ?true: false}/>
+                    <HeaderMiddleLink icon='🏆' text='Leaderboard' path='/Leaderboard' flag={router == "/Leaderboard" ?true: false}/>
+                    <HeaderMiddleLink icon='💰' text='Rewards' path='/Rewards' flag={router == "/Rewards" ?true: false}/>
                 </div>
                 
                 <div className="headerRight">
