@@ -19,32 +19,32 @@ const Header = () => {
                 <Link className='headerLeft' href="/">
                     <Image src={homeLogo} alt="logoHome" />
                 </Link>     
-                {/* <div className="frame">          */}
-                    <div className='headerMiddle'>
-                        <HeaderMiddleLink icon='🚀' text='Missions' path='/missions' onClick={() => setFlag(currentState => !currentState)} flag={flag}/>
-                        <HeaderMiddleLink icon='🏆' text='Leaderboard' path='/leaderboard' onClick={() => setFlag(currentState => !currentState)} flag={flag}/>
-                        <HeaderMiddleLink icon='💰' text='Rewards' path='/rewards' onClick={() => setFlag(currentState => !currentState)} flag={flag}/>
+                
+                <div className='headerMiddle'>
+                    <HeaderMiddleLink icon='🚀' text='Missions' path='/missions' onClick={() => setFlag(currentState => !currentState)} flag={flag}/>
+                    <HeaderMiddleLink icon='🏆' text='Leaderboard' path='/leaderboard' onClick={() => setFlag(currentState => !currentState)} flag={flag}/>
+                    <HeaderMiddleLink icon='💰' text='Rewards' path='/rewards' onClick={() => setFlag(currentState => !currentState)} flag={flag}/>
+                </div>
+                
+                <div className="headerRight">
+                    <div className="diamonds">
+                        <div className='icon'>
+                            <Image src={diamondBlue} alt="diamond"/>
+                        </div>
+                        <div className='num'>20,000</div>    
                     </div>
-                    
-                    <div className="headerRight">
-                        <div className="diamonds">
-                            <div className='icon'>
-                                <Image src={diamondBlue} alt="diamond"/>
-                            </div>
-                            <div className='num'>20,000</div>    
+                    <div className="coins">
+                        <div className='icon'>
+                            <Image src={coinGold} alt="coin"/>
                         </div>
-                        <div className="coins">
-                            <div className='icon'>
-                                <Image src={coinGold} alt="coin"/>
-                            </div>
-                            <div className='num'>11,000</div>    
-                        </div>
-                        <div className='Avatar'>                       
-                            <Image src={avatar} alt="avatar" className="avatar"/>
-                            <Image src={status} alt="status" className='status' />                        
-                        </div>
+                        <div className='num'>11,000</div>    
                     </div>
-                {/* </div>             */}
+                    <div className='Avatar'>                       
+                        <Image src={avatar} alt="avatar" className="avatar"/>
+                        <Image src={status} alt="status" className='status' />                        
+                    </div>
+                </div>
+                
             </div>
         </>
     )
