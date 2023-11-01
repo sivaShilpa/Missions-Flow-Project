@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,10 +19,13 @@
     "react-dom": "^18",
     "styled-components": "^6.1.0",
     "swr": "^2.2.4"
-  }, 
+  },
   "browser": {
     "fs": false,
     "os": false,
     "path": false
+  },
+  "devDependencies": {
+    "eslint-plugin-simple-import-sort": "^10.0.0"
   }
 }
