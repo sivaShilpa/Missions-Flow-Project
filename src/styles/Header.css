@@ -1,66 +1,84 @@
 .header{
     background: var(--dark-dark-2, #1F222A);
-    width: 98%;
+    width: 96%;
     height: 85px;
     flex-shrink: 0;
     align-items: center;
     left: 0;
     top: 0;
+    right:0;
     position: fixed;    
-    padding: 0 20px;
+    padding: 0 40px;
 }
 .header, .headerMiddle, .headerRight{
     display: flex;
     justify-content: space-between;
-}
+} 
+/* .frame{
+    display: flex;
+    width: 1257.28px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 140px;
+} */
 .headerMiddle{    
-    width: 30%;
+    width: 23%;
     align-items: center; 
-}
-.midLink{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 21%;
-    height: 77px;
-    position: relative;
-}
-.linkText{
-    color: #808191;
-    text-decoration: none;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    padding-top: 32px;
-}
-.linkTextWrap{
-    height: 85px;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    .linkTextLine{
-        width: 100px;
-        height: 4px;
-        flex-shrink: 0;
-        border-radius: 2px 2px 0px 0px;
-        background: var(--dark-dark-2, #1F222A);
-    }
-
-}
-.linkTextWrap:hover, .linkTextWrapActive{
-    .linkText{
-        background: var(--gradients-blue-2, linear-gradient(286deg, #00F5A0 0%, #00D9F5 100%));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .linkTextLine{
-        background: var(--gradients-blue-2, linear-gradient(286deg, #00F5A0 0%, #00D9F5 100%));
-    }
 }
 
 .headerRight{
     color: White;
-    width: 15%;
+    width: 20%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin-right: 10px;
+    /* margin-right: 10px; */
+}
+.diamonds, .coins{
+    border: solid 2px;
+    display: flex;
+    padding: 2px 16px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    border-radius: 40px;
+    background: var(--greyscale-900, #212121);
+}
+.diamonds {
+    border: 2px solid var(--gradients-gradient-blue, #246BFD);
+}
+.coins{
+    border: 2px solid var(--gradients-gradient-yellow, #FACC15);
+}
+.icon{
+    padding-top: 5px;
+}
+.num{
+    color: var(--others-white, #FFF);
+    /* font-family: Inter; */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 32px */
+}
+.Avatar{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+   
+}
+.avatar{
+    position: relative;
+    /* margin-top: 10px;; */
+}
+.status{
+    /* bottom: 0; */
+    /* right:0; */
+    /* float: right; */
+    margin-top: 58px;
+    margin-left: 30px;
+    position: fixed;
+    z-index:2;
+    margin-bottom: 20px;
 }

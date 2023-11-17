@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background: var(--gradients-light-blue-purple, linear-gradient(286deg, #99FDFF 0%, #D1B3FF 100%));
+    width: 95.5%;
+    height: 2000px;
+    padding: 118px 43px;    
+}
+.featured{
+    width: 100%;
+}
